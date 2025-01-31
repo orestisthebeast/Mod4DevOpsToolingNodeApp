@@ -1,0 +1,27 @@
+MAKE SURE TO UNDERSTAND TESTS and installing venv and stuff in the pipeline
+
+How to build a nodeJS application
+research
+npm start or npm install etc
+
+Lab 5 - Jenkins credentials 
+
+There's 2 different credentials that we want to add
+We need a GH cred and a Dockerhub cred
+We'll be pushing to docker hub. 
+Can have an envar section and get secret text credential
+then build an nginx container and print out the secret text rather than default html
+Then push image to dockerhub
+
+We want it to live in docker hub and kubernetes will pull from there on Monday 
+
+We need to test it - test the login with Docker 
+
+Then lab 6 - webhook
+
+Click 1 button to create webhook, then link repo
+Just follow lab instructions
+
+Stretch goal - make it nicer, don't just rum the script, break it up into sections
+
+Do Docker compose this pm 
