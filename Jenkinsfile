@@ -1,11 +1,6 @@
 pipeline {
     agent any
     stages {
-        stage('Clone Repository') {
-            steps {
-                git 'https://github.com/your-repo/nodejs-project.git'
-            }
-        }
         stage('Build') {
             steps {
                 sh 'npm install'
