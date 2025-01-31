@@ -1,6 +1,11 @@
 pipeline {
     agent any
     stages {
+        stage('Build') {
+            steps {
+                sh 'npm install'
+            }
+        }
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t nodejs-project .'
