@@ -1,6 +1,13 @@
 pipeline {
     agent any
     stages {
+        stage('Cleanup') {
+            steps {
+                echo 'Cleaning up previous containers..'
+                sh 'docker ps -a -q | grep . && docker rm -f $(docker ps -a -q) || true'
+                sh 'pwd && ls -la'
+            }
+        }
         stage('Build') {
             steps {
                 sh 'npm install'
